@@ -1,23 +1,23 @@
-// Step 1: Import React
-import * as React from 'react'
-import Layout from '../components/layout'
-import { StaticImage } from 'gatsby-plugin-image'
-import Seo from '../components/seo'
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Copyright from '../components/Copyright';
+import Toolbar from '@mui/material/Toolbar';
+import NavBar from '../components/NavBar';
 
-// Step 2: Define your component
-const IndexPage = () => {
+
+export default function Index(props) {
   return (
-    <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-        src="../images/icon.png"
-      />
-    </Layout>
-  )
+    <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
+        <NavBar />
+        <Toolbar />
+        <Typography>
+          Website content coming soon!
+        </Typography>
+        <Copyright />
+      </Box>
+    </Container>
+  );
 }
-
-export const Head = () => <Seo title="Home Page" />
-
-// Step 3: Export your component
-export default IndexPage
